@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>hatf</title>
+</head>
+
+<body>
+    const express = require('express');
+    const app = express();
+    const port = 3000;
+
+    // بيانات API كبيرة
+    const largeData = Array.from({ length: 100 }, (_, i) => ({
+    id: i + 1,
+    name: `Item ${i + 1}`,
+    description: `This is the description for item ${i + 1}`,
+    value: Math.floor(Math.random() * 1000)
+    }));
+
+    app.get('/api/large-data', (req, res) => {
+    res.json({ data: largeData });
+    });
+
+    app.listen(port, () => {
+    console.log(`API is running on http://localhost:${port}`);
+    });
+</body>
+
+</html>
