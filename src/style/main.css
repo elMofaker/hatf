@@ -13,7 +13,19 @@
     padding: .5rem 1rem;
 }
 
-.center{
+.main-btn {
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--black);
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    height: 2.5rem;
+    width: 8rem;
+
+}
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +41,8 @@ body {
     font-family: 'ManchetteModern', sans-serif;
 }
 
+/* start nav */
+
 header {
     /* position: fixed; */
     /* z-index: 1000; */
@@ -40,7 +54,6 @@ header {
         opacity: 30px;
         border-bottom: var(--primary) 1px solid;
         direction: rtl;
-
 
         ul {
             width: 100%;
@@ -83,6 +96,9 @@ header {
     text-align: center;
     color: white;
     padding: 20px;
+    box-shadow: 2px 0 23px -4px black;
+
+
 
     .overlay {
         position: absolute;
@@ -104,17 +120,19 @@ header {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: bold;
-        span{
-            img{
+
+        span {
+            img {
                 width: 20px;
                 height: 20px;
             }
         }
     }
-    p{
-        font-size: 1.3rem;
+
+    p {
+        font-size: 1.1rem;
     }
 
     a {
@@ -129,6 +147,202 @@ header {
 
 
 }
+
+@media (max-width:767px) {
+    .hero {
+        height: 90vh;
+
+
+        h1 {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
 /* end hero */
 
-/* start  */
+/* start services */
+
+.services {
+    background-color: var(--black);
+
+    .bg {
+        box-shadow: 0 0 12px -3px black;
+        border-radius: 20px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--white);
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    .card {
+        background-color: var(--black);
+        color: var(--white);
+        border: none;
+
+        .card-img-top {
+
+            width: 100%;
+            min-height: 200px;
+            max-height: 200px;
+
+        }
+
+        .card-body {
+
+            img {
+                width: 25px;
+                height: 25px;
+
+            }
+
+            h5 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: .7rem;
+            }
+
+        }
+    }
+
+    .main-link {
+        background-color: var(--primary);
+        text-decoration: none;
+        color: var(--black);
+        border-radius: 8px;
+        font-weight: 800;
+        padding: .5rem 1rem;
+        width: 50%;
+    }
+
+}
+
+/* end services */
+
+/* start about-1 */
+
+.about-1 {
+    background-color: var(--black);
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--white);
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+
+            h5 {
+                font: bold;
+                font-size: 1rem;
+                color: var(--white);
+
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+
+            }
+
+            div {
+                display: flex;
+                align-items: baseline;
+                justify-content: end;
+
+                p {
+
+                    font-size: .7rem;
+                    color: var(--white);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+/* end about-1 */
+
+/* start about-2 */
+.about-2 {
+
+    background-color: var(--black);
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--white);
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: .9rem;
+
+        li {
+
+            h5 {
+                font: bold;
+                font-size: 1rem;
+                color: var(--white);
+
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+
+            }
+
+            div {
+                display: flex;
+                align-items: baseline;
+                justify-content: end;
+
+                p {
+
+                    font-size: .7rem;
+                    color: var(--white);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+/* end about-2 */
