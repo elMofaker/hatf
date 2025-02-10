@@ -59,6 +59,9 @@ header {
             z-index: 100;
             margin-top: 15px;
         }
+        .navbar-brand {
+            margin: 0;
+        }
 
         .logo {
             width: 80px;
@@ -113,7 +116,7 @@ header {
 
 @media (max-width:456px) {
     header nav .logo {
-        width: 30px;
+        width: 50px;
         height: 40px;
     }
 
@@ -628,6 +631,7 @@ header {
 /* end contact */
 /* start footer */
 footer {
+    border-top: var(--primary) .5px solid;
     background-color: var(--black);
     box-shadow: 0 0px 20px -6px black;
 
