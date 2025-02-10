@@ -54,7 +54,7 @@ header {
         direction: rtl;
 
         .navbar-collapse {
-            background-color:  var(--black);
+            background-color: var(--black);
             border-radius: 20px;
             z-index: 100;
             margin-top: 15px;
@@ -540,6 +540,7 @@ header {
         }
 
         .card-body {
+
             .dev {
                 background-color: var(--primary);
                 border-radius: 50%;
@@ -563,7 +564,7 @@ header {
     }
 
     .swiper {
-        height: 420px;
+        height: 400px;
     }
 
     .swiper-pagination-bullet {
