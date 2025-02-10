@@ -39,22 +39,31 @@
 }
 
 body {
-    font-family: 'ManchetteModern', sans-serif;
+    font-family: 'Tajawal', sans-serif;
 }
 
 /* start nav */
 
 header {
-    /* position: fixed; */
-    /* z-index: 1000; */
+    position: fixed;
+    z-index: 1000;
     width: 100%;
 
     nav {
         height: 90px;
         background-color: var(--black);
-        opacity: 30px;
         border-bottom: var(--primary) 1px solid;
         direction: rtl;
+
+        .logo {
+            width: 80px;
+            height: 70px;
+        }
+
+
+        .container {
+            background-color: var(--black);
+        }
 
         ul {
             width: 100%;
@@ -72,13 +81,55 @@ header {
             }
         }
 
-        .navbar-toggler {
-            background-color: var(--white);
+        a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 400;
         }
 
     }
 
+    .navbar-toggler,
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+        background-color: none;
+        border: none;
+    }
 }
+
+@media (max-width:992px) {
+
+    li {
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:456px) {
+    .logo {
+        width: 10px;
+        height: 40px;
+    }
+
+    nav .main-link {
+        font-size: .8rem;
+        padding: .4rem .7rem;
+
+    }
+
+    nav .main-link span {
+        font-weight: 500;
+        font-size: .7rem;
+    }
+
+    nav .main-link img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
 
 /* end nav */
 
@@ -151,7 +202,7 @@ header {
 
 @media (max-width:767px) {
     .hero {
-        height: 90vh;
+        height: 65vh;
 
 
         h1 {
@@ -245,7 +296,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
         color: var(--white);
 
@@ -260,10 +311,11 @@ header {
         list-style-type: none;
 
         li {
+            padding: 15px 0;
 
             h5 {
                 font: bold;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 color: var(--white);
 
                 img {
@@ -277,10 +329,11 @@ header {
                 display: flex;
                 align-items: baseline;
                 justify-content: end;
+                gap: 7px;
 
                 p {
 
-                    font-size: .7rem;
+                    font-size: 1rem;
                     color: var(--white);
                     padding-left: 5px;
                 }
@@ -298,7 +351,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
         color: var(--white);
 
@@ -311,11 +364,9 @@ header {
 
     ul {
         list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        gap: .9rem;
 
         li {
+            padding: 15px 0;
 
             h5 {
                 font: bold;
@@ -333,10 +384,11 @@ header {
                 display: flex;
                 align-items: baseline;
                 justify-content: end;
+                gap: 7px;
 
                 p {
 
-                    font-size: .7rem;
+                    font-size: 1rem;
                     color: var(--white);
                     padding-left: 5px;
                 }
@@ -355,7 +407,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         color: var(--white);
 
@@ -408,10 +460,12 @@ header {
 
             h5 {
                 font-size: 1.3rem;
+                font-weight: bold;
+                padding-bottom: 5px;
             }
 
             p {
-                font-size: .9rem;
+                font-size: 1rem;
             }
 
         }
@@ -449,7 +503,7 @@ header {
 .comment {
     background-color: var(--black);
 
-    .bg{
+    .bg {
         padding: 10px;
     }
 
@@ -503,7 +557,7 @@ header {
         }
     }
 
-    .swiper{
+    .swiper {
         height: 420px;
     }
 
@@ -522,3 +576,40 @@ header {
 }
 
 /* end comment */
+
+/* start about-3 */
+.about-3 {
+    background-color: var(--black);
+
+    ul {
+        list-style: none;
+
+        li {
+            padding: 15px 0;
+        }
+    }
+
+    p,
+    h4 {
+        color: var(--white);
+        margin: 0;
+    }
+}
+
+/* end about-3 */
+
+/* start contact */
+.contact {
+    background-color: var(--black);
+
+    h5,
+    p {
+        color: var(--white);
+    }
+
+    span {
+        color: var(--primary);
+    }
+}
+
+/* end contact */
