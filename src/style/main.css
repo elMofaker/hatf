@@ -112,13 +112,13 @@ header {
 }
 
 @media (max-width:456px) {
-    nav .logo {
-        width: 40px;
+    header nav .logo {
+        width: 30px;
         height: 40px;
     }
 
     nav .main-link {
-        font-size: .8rem;
+        font-size: .7rem;
         padding: .4rem .7rem;
 
     }
