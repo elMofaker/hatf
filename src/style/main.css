@@ -608,9 +608,15 @@ header {
 .contact {
     background-color: var(--black);
 
-    h5,
+    h5 {
+        color: var(--white);
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
     p {
         color: var(--white);
+        font-size: 1rem;
     }
 
     span {
@@ -619,3 +625,90 @@ header {
 }
 
 /* end contact */
+/* start footer */
+footer {
+    background-color: var(--black);
+    box-shadow: 0 0px 20px -6px black;
+
+    p {
+        color: var(--white);
+        margin: 0;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    h5 {
+        color: var(--white);
+        font-weight: bold;
+
+    }
+
+    .list-1 {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
+
+    }
+
+    ul {
+        list-style: none;
+
+    }
+
+    li {
+        a {
+            img {
+                width: 30px;
+            }
+
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1rem;
+        }
+    }
+
+    .logo {
+        width: 50%;
+        height: 50%;
+    }
+
+}
+
+.dropdown-toggle::after {
+    display: none;
+    /* إخفاء السهم الافتراضي للـ Bootstrap */
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease-in-out;
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    /* عند الفتح السهم ينقلب للأسفل */
+}
+
+/* end footer */
