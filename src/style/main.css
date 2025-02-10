@@ -45,8 +45,6 @@ body {
 /* start nav */
 
 header {
-    position: fixed;
-    z-index: 1000;
     width: 100%;
 
     nav {
@@ -55,14 +53,16 @@ header {
         border-bottom: var(--primary) 1px solid;
         direction: rtl;
 
+        .navbar-collapse {
+            background-color:  var(--black);
+            border-radius: 20px;
+            z-index: 100;
+            margin-top: 15px;
+        }
+
         .logo {
             width: 80px;
             height: 70px;
-        }
-
-
-        .container {
-            background-color: var(--black);
         }
 
         ul {
