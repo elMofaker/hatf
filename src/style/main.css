@@ -87,6 +87,11 @@ header {
             font-weight: 400;
         }
 
+        .main-link img {
+            width: 20px;
+            height: 20px;
+        }
+
     }
 
     .navbar-toggler,
@@ -107,8 +112,8 @@ header {
 }
 
 @media (max-width:456px) {
-    .logo {
-        width: 10px;
+    nav .logo {
+        width: 40px;
         height: 40px;
     }
 
