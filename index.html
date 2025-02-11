@@ -989,38 +989,37 @@
         });
 
 
-        // btn add and remov card
-        function toggleCards() {
-            let moreCards = document.querySelectorAll(".hidden");
-            moreCards.forEach(card => {
-                card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
-            });
+        // btn add and remov services
+        document.addEventListener("DOMContentLoaded", function () {
+            let showMoreButton = document.getElementById("showMore");
+            let hiddenCards = document.querySelectorAll(".services .card-item:nth-child(n+3)");
 
-            let button = document.getElementById("showMore");
-            button.innerText = button.innerText === "عرض المزيد" ? "إخفاء الكروت" : "عرض المزيد";
-        }
+            function toggleServicesCards() {
+                hiddenCards.forEach(card => {
+                    card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
+                });
 
-        function checkScreenSize() {
-            let allCards = document.querySelectorAll(".card-item");
-            let moreCards = document.querySelectorAll(".hidden");
-            let button = document.getElementById("showMore");
-
-            if (window.innerWidth >= 768) {
-                allCards.forEach(card => card.style.display = "block");
-                button.style.display = "none";
-            } else {
-                moreCards.forEach(card => card.style.display = "none");
-                button.style.display = "inline-block";
+                showMoreButton.innerText = showMoreButton.innerText === "عرض المزيد" ? "إخفاء الكروت" : "عرض المزيد";
             }
-        }
 
-        document.getElementById("showMore").addEventListener("click", toggleCards);
-        window.addEventListener("resize", checkScreenSize);
-        window.addEventListener("load", checkScreenSize);
+            function checkServicesScreenSize() {
+                if (window.innerWidth >= 768) {
+                    hiddenCards.forEach(card => card.style.display = "block");
+                    showMoreButton.style.display = "none";
+                } else {
+                    hiddenCards.forEach(card => card.style.display = "none");
+                    showMoreButton.style.display = "inline-block";
+                }
+            }
+
+            showMoreButton.addEventListener("click", toggleServicesCards);
+            window.addEventListener("resize", checkServicesScreenSize);
+            checkServicesScreenSize();
+        });
 
 
-
-        function toggleCards() {
+        // btn add and remove mcq
+        function toggleMcqCards() {
             let moreCards = document.querySelectorAll(".mcq .card-hiden");
             moreCards.forEach(card => {
                 card.style.display = (card.style.display === "none" || card.style.display === "") ? "block" : "none";
@@ -1030,7 +1029,7 @@
             button.innerText = button.innerText === "عرض المزيد" ? "إخفاء الكروت" : "عرض المزيد";
         }
 
-        function checkScreenSize() {
+        function checkMcqScreenSize() {
             let allCards = document.querySelectorAll(".mcq .card-item");
             let moreCards = document.querySelectorAll(".mcq .card-hiden");
             let button = document.querySelector(".mcq #btn-hiden");
@@ -1046,11 +1045,14 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             let button = document.querySelector(".mcq #btn-hiden");
-            if (button) button.addEventListener("click", toggleCards);
+            if (button) button.addEventListener("click", toggleMcqCards);
 
-            checkScreenSize();
-            window.addEventListener("resize", checkScreenSize);
+            checkMcqScreenSize();
+            window.addEventListener("resize", checkMcqScreenSize);
         });
+
+
+
 
 
     </script>
