@@ -5,8 +5,6 @@
     --brown: #2F2D2D;
 }
 
-
-
 .main-link {
     background-color: var(--primary);
     text-decoration: none;
@@ -139,8 +137,6 @@ header {
     }
 }
 
-
-
 /* end nav */
 
 /* start hero */
@@ -243,7 +239,7 @@ header {
     }
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -276,11 +272,11 @@ header {
             }
 
             h5 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             p {
-                font-size: .7rem;
+                font-size: .8rem;
             }
 
         }
@@ -296,6 +292,20 @@ header {
         width: 50%;
     }
 
+}
+
+@media (max-width: 767px) {
+    .services {
+
+        h5,
+        h4 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: .7rem;
+        }
+    }
 }
 
 /* end services */
@@ -723,7 +733,6 @@ footer {
     display: none;
 }
 
-/* التحكم في عرض الكروت عند الشاشات الصغيرة */
 @media (max-width: 767px) {
     .hidden {
         display: none;
@@ -734,6 +743,24 @@ footer {
     }
 
     #showMore {
+        display: inline-block !important;
+    }
+}
+
+#btn-hiden {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .card-hiden {
+        display: none;
+    }
+
+    .card-item:nth-child(n+3) {
+        display: none;
+    }
+
+    #btn-hiden {
         display: inline-block !important;
     }
 }
