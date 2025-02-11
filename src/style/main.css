@@ -12,6 +12,12 @@
     border-radius: 8px;
     font-weight: 800;
     padding: .5rem 1rem;
+    transition: 0.5s;
+    
+}
+.main-link:hover{
+    background-color: var(--white);
+    transition: 0.5s;
 }
 
 .main-btn {
@@ -22,8 +28,14 @@
     font-size: 1rem;
     font-weight: bold;
     padding: .5rem 1rem;
+    transition: 0.5s;
 
 }
+.main-btn:hover {
+    background-color: var(--primary);
+    transition: 0.5s;
+}
+
 
 .center {
     display: flex;
@@ -116,12 +128,12 @@ header {
 
 @media (max-width:456px) {
     header nav .logo {
-        width: 50px;
+        width: 63px;
         height: 40px;
     }
 
     nav .main-link {
-        font-size: .7rem;
+        font-size: .9rem;
         padding: .4rem .7rem;
 
     }
@@ -132,7 +144,7 @@ header {
     }
 
     nav .main-link img {
-        width: 15px;
+        width: 31px;
         height: 15px;
     }
 }
@@ -191,16 +203,6 @@ header {
 
     p {
         font-size: 1.1rem;
-    }
-
-    a {
-        background-color: var(--white);
-        text-decoration: none;
-        color: var(--black);
-        border-radius: 15px;
-        font-size: 20px;
-        font-weight: 800;
-        padding: .5rem 1rem;
     }
 
 
@@ -289,7 +291,7 @@ header {
         border-radius: 8px;
         font-weight: 800;
         padding: .5rem 1rem;
-        width: 50%;
+        width: 38%;
     }
 
 
