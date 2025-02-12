@@ -248,7 +248,6 @@ header {
         background-color: var(--black);
         color: var(--white);
         border: none;
-        height: auto;
 
         .card-img-top {
 
