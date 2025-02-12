@@ -16,11 +16,6 @@
 
 }
 
-.main-link:hover {
-    background-color: var(--white);
-    transition: 0.5s;
-}
-
 .main-btn {
     background-color: var(--white);
     text-decoration: none;
@@ -32,12 +27,6 @@
     transition: 0.5s;
 
 }
-
-.main-btn:hover {
-    background-color: var(--primary);
-    transition: 0.5s;
-}
-
 
 .center {
     display: flex;
@@ -158,7 +147,7 @@ header {
 .hero {
     position: relative;
     background-image: url("../img/bg-hero.svg");
-    height: 60vh;
+    height: 75vh;
     width: 100%;
     background-size: cover;
     background-position: center center;
@@ -271,8 +260,8 @@ header {
         .card-body {
 
             img {
-                width: 25px;
-                height: 25px;
+                width: 15px;
+                height: 15px;
 
             }
 
