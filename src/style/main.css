@@ -39,7 +39,6 @@
     background-color: var(--primary);
     transition: 0.5s;
     color: var(--black);
-    padding-bottom: 5px;
 }
 
 .center {
@@ -68,6 +67,18 @@ header {
         background-color: var(--black);
         border-bottom: var(--primary) 1px solid;
         direction: rtl;
+
+        .nav-item {
+            padding: 5px 10px;
+            border: 1px solid transparent;
+        }
+
+        .nav-item.active {
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
 
         .navbar-collapse {
             background-color: var(--black);
@@ -98,7 +109,6 @@ header {
                 border-radius: 9px;
                 border: 1px solid transparent;
 
-
                 a {
                     color: var(--white);
                     text-decoration: none;
@@ -117,6 +127,7 @@ header {
 
                 .dropdown-toggle {
                     color: var(--white);
+                    padding: 0;
                 }
 
                 .dropdown-menu {
@@ -124,8 +135,24 @@ header {
                     border-radius: 10px;
                     background-color: var(--black);
                     box-shadow: 0 0 18px -12px #000000;
+
+                    li {
+                        background: transparent;
+                        border: 1px solid transparent;
+                        border-radius: 8px;
+                        a{
+                            background-color: transparent;
+                        }
+                    }
+
+                    li:hover {
+                        background: transparent;
+                        border: 1px solid var(--primary);
+                        border-radius: 8px;
+                    }
                 }
-                .dropdown-item{
+
+                .dropdown-item {
                     color: var(--white);
                 }
 
@@ -135,12 +162,17 @@ header {
                 color: var(--primary) !important;
             }
 
+            .dropdown-toggle:hover {
+                color: var(--primary);
+            }
+
             a {
                 color: var(--white);
                 text-decoration: none;
                 font-size: .9rem;
                 border-radius: 8px;
             }
+
         }
     }
 
@@ -285,10 +317,6 @@ header {
         max-width: 20rem;
     }
 
-    .bg:hover {
-        box-shadow: 0 0 12px -3px var(--primary);
-        transition: .5s;
-    }
 
     h4 {
         font-size: 1rem;
@@ -306,6 +334,7 @@ header {
         background-color: var(--black);
         color: var(--white);
         border: none;
+        border: 3px solid transparent;
 
         .card-img-top {
 
@@ -334,6 +363,11 @@ header {
         }
     }
 
+    .card:hover {
+        box-shadow: none;
+        border: 3px solid var(--primary);
+    }
+
     .main-link {
         background-color: var(--primary);
         text-decoration: none;
@@ -352,7 +386,7 @@ header {
 
     .main-link:hover img {
         filter: brightness(0) saturate(100%) invert(70%) sepia(42%) saturate(648%) hue-rotate(359deg) brightness(101%) contrast(102%);
-        transition: 0.5s;
+        transition: 0.3s;
     }
 
 
@@ -629,9 +663,10 @@ header {
     .card {
         background-color: var(--black);
         color: var(--white);
-        border: none;
+        border: 3px solid transparent;
         box-shadow: 0 0 12px -3px black;
         border-radius: 20px;
+
 
         .card-img-top {
 
@@ -663,6 +698,11 @@ header {
             }
 
         }
+    }
+
+    .card:hover {
+        box-shadow: none;
+        border: 3px solid var(--primary);
     }
 
     .swiper {
@@ -807,6 +847,11 @@ footer {
     .logo {
         width: 50%;
         height: 50%;
+    }
+
+    .logo:hover {
+        filter: brightness(0) saturate(100%) invert(70%) sepia(42%) saturate(648%) hue-rotate(359deg) brightness(101%) contrast(102%);
+        transition: 0.1s;
     }
 
 }

@@ -30,10 +30,6 @@
                 <a class="main-link d-block d-lg-none" href="#">احجز استشارتك المجانية الآن! </a>
 
                 <div class="justify-content-center align-items-center d-flex d-lg-none">
-                    <a class="main-link justify-content-center align-items-center d-flex gap-1 d-lg-none" href="#">
-                        <span>EN</span>
-                        <img class="img-lang" src="src/img/lang.svg" alt="img">
-                    </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -41,7 +37,6 @@
                         <img src="src/img/icon-bergr.svg" width="19px" alt="img" />
                     </button>
                 </div>
-
 
                 <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto my-4 my-lg-0">
@@ -77,9 +72,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="" href="#">اتصل بنا</a>
-                        </li>
-                        <li class="nav-item d-none d-lg-block">
-                            <a class="" href="#">الانجليزيه</a>
                         </li>
 
                         <li class="nav-item d-none d-lg-block">
@@ -1016,6 +1008,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
+        // header
+        document.addEventListener("DOMContentLoaded", function () {
+            let navItems = document.querySelectorAll(".nav-item");
+
+            navItems.forEach(item => {
+                let link = item.querySelector("a");
+
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    removeActiveStates();
+                    item.classList.add("active");
+                });
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!event.target.closest(".nav-item")) {
+                    removeActiveStates();
+                }
+            });
+
+            function removeActiveStates() {
+                navItems.forEach(item => item.classList.remove("active"));
+            }
+        });
+
         // swiper
         var swiper = new Swiper(".mySwiper", {
             loop: true,
@@ -1127,6 +1144,7 @@
                 });
             });
         });
+
 
 
 
