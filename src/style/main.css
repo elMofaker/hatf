@@ -3,6 +3,7 @@
     --black: #161616;
     --white: #fff;
     --brown: #2F2D2D;
+    --opasete: #e4cc85;
 }
 
 .main-link {
@@ -16,6 +17,13 @@
 
 }
 
+.main-link:hover {
+    background-color: var(--opasete);
+    transition: 0.5s;
+    color: var(--black);
+}
+
+
 .main-btn {
     background-color: var(--white);
     text-decoration: none;
@@ -26,6 +34,13 @@
     padding: .5rem 1rem;
     transition: 0.5s;
 
+}
+
+.main-btn:hover {
+    background-color: var(--primary);
+    transition: 0.5s;
+    color: var(--black);
+    padding-bottom: 5px;
 }
 
 .center {
@@ -79,19 +94,53 @@ header {
             justify-content: space-around;
 
             li {
+                position: relative;
+                padding: 5px 7px;
+                border-radius: 9px;
+                border: 1px solid transparent;
+
+
                 a {
                     color: var(--white);
                     text-decoration: none;
                     font-weight: 400;
+                    transition: .3s;
+                }
+
+                a:hover {
+                    color: var(--primary);
+                    transition: .3s;
+                }
+            }
+
+            /* strat drop list */
+            .dropdown {
+
+                .dropdown-toggle {
+                    color: var(--white);
+                }
+
+                .dropdown-menu {
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    background-color: var(--black);
+                    box-shadow: 1px 1px var(--black);
+
+                }
+
+                .nav-link.show {
+                    color: var(--primary) !important;
+                }
+
+                a {
+                    color: var(--white);
+                    text-decoration: none;
+                    font-size: .9rem;
+                    border-radius: 8px;
                 }
             }
         }
 
-        a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 400;
-        }
 
         .main-link img {
             width: 15px;
@@ -108,7 +157,10 @@ header {
         border: none;
         padding: 5px;
     }
+
+
 }
+
 
 @media (max-width:992px) {
 
@@ -230,6 +282,13 @@ header {
     .bg {
         box-shadow: 0 0 12px -3px black;
         border-radius: 20px;
+        transition: .5s;
+        max-width: 20rem;
+    }
+
+    .bg:hover {
+        box-shadow: 0 0 12px -3px var(--primary);
+        transition: .5s;
     }
 
     h4 {
@@ -284,6 +343,17 @@ header {
         font-weight: 800;
         padding: .5rem 1rem;
         width: 45%;
+    }
+
+    .main-link:hover {
+        background-color: transparent;
+        transition: 0.5s;
+        color: var(--primary);
+    }
+
+    .main-link:hover img {
+        filter: brightness(0) saturate(100%) invert(70%) sepia(42%) saturate(648%) hue-rotate(359deg) brightness(101%) contrast(102%);
+        transition: 0.5s;
     }
 
 
@@ -622,19 +692,41 @@ header {
 
     ul {
         list-style: none;
+        padding: 0;
 
         li {
             padding: 15px 0;
+            cursor: pointer;
+
+            p {
+                font-size: 1rem;
+                color: var(--white);
+                gap: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+            }
+        }
+
+        .answer {
+            color: var(--white);
+            margin-right: 23px;
         }
     }
 
-    p,
     h4 {
-        font-size: 1rem;
         color: var(--white);
-        margin: 0;
+    }
+
+    .toggle-question img {
+        transition: transform 0.3s ease;
+    }
+
+    .toggle-question.active img {
+        transform: rotate(180deg);
     }
 }
+
 
 /* end about-3 */
 
@@ -722,7 +814,6 @@ footer {
 
 .dropdown-toggle::after {
     display: none;
-    /* إخفاء السهم الافتراضي للـ Bootstrap */
 }
 
 .dropdown-btn {
@@ -743,7 +834,6 @@ footer {
 
 .rotate {
     transform: rotate(90deg);
-    /* عند الفتح السهم ينقلب للأسفل */
 }
 
 /* end footer */
