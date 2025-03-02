@@ -1229,7 +1229,43 @@ footer {
 
 /* end home blog */
 /* start home packages */
-.packages {
+
+.home-packages {
+    background-color: var(--black);
+
+    h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--white);
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    .swiper {
+
+        img {
+            width: 100%;
+
+        }
+
+        @media (min-width:767px) {
+            img {
+                width: 85%;
+
+            }
+        }
+    }
+
+
+}
+
+/* end home packages */
+/* start home contact */
+.home-contact {
     background-color: var(--black);
 
     h4 {
@@ -1245,5 +1281,5 @@ footer {
     }
 }
 
-/* end home packages */
+/* end home contact */
 /* end home page */

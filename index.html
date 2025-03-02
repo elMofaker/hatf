@@ -391,7 +391,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 col-12 col-lg-4 py-3 center bg-w">
                     <div class="center py-3">
                         <div class="card">
@@ -409,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 col-12 col-lg-4 py-3 center bg-w">
                     <div class="center py-3">
                         <div class="card">
@@ -434,21 +434,71 @@
     </div>
     <!-- end-home-blog -->
     <!-- start-hom-packages -->
-    <div class="home-packages py-2">
-        <div class="container py-3">
-            <div class="d-flex justify-content-end py-5">
-                <div class="main-title-home">
-                    <h4 class="card-title">
+    <div class="home-packages pt-2 pb-5">
+        <div class="">
+            <div class="container d-flex justify-content-end py-3">
+                <div class="main-title-home ">
+                    <h4 class="card-title ">
                         احدث مدوناتنا
-                        <img src="src/img/icon-home-packages.svg" width="5px" height="5px" alt="">
+                        <img src="src/img/icon-home-packages.svg" alt="">
                     </h4>
                 </div>
             </div>
 
+            <div class="swiper-container ps-3">
+                <div class="swiper home-packages-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="src/img/img-home-packages.png" alt="Blog Image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/img/img-home-packages.png" alt="Blog Image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/img/img-home-packages.png" alt="Blog Image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/img/img-home-packages.png" alt="Blog Image">
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+
+            <div class="w-100 d-flex justify-content-center align-items-center pt-5">
+                <a href="#" class="center main-btn">
+                    <span class="center me-2">
+                        <img src="src/img/icon-btn-hero.svg" alt="">
+                    </span>
+                    اطلب باقتك
+                </a>
+            </div>
         </div>
     </div>
     <!-- end-home-packages -->
+    <!-- start-hom-contact -->
+    <div class="home-contact pt-2 pb-5">
+        <div class="container">
+            <div class="d-flex justify-content-end py-3">
+                <div class="main-title-home ">
+                    <h4 class="card-title ">
+                        لطلب خدماتنا الرجاء التواصل معنا
+                        <img src="src/img/icon-home-packages.svg" alt="">
+                    </h4>
+                </div>
+            </div>
+
+            <div class="w-100 d-flex justify-content-center align-items-center pt-5">
+                <a href="#" class="center main-btn">
+                    <span class="center me-2">
+                        <img src="src/img/icon-btn-hero.svg" alt="">
+                    </span>
+                    اطلب باقتك
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end-home-contact -->
     <!-- start footer -->
     <footer class="footer py-5">
         <div class="container">
@@ -556,6 +606,32 @@
 
             function removeActiveStates() {
                 navItems.forEach(item => item.classList.remove("active"));
+            }
+        });
+    </script>
+    <!-- slider home packages -->
+    <script>
+        var swiper = new Swiper(".home-packages-slider", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            rtl: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.5
+                },
+                0: {
+                    slidesPerView: 1.5
+                }
+
             }
         });
     </script>
