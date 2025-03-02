@@ -668,39 +668,62 @@
 
             }
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll(".form-group input, .textarea-group textarea");
 
-
-        function toggleDropdown(element) {
-            // إغلاق أي قائمة مفتوحة قبل فتح القائمة الجديدة
-            document.querySelectorAll('.dropdown').forEach(dropdown => {
-                if (dropdown !== element.parentElement) {
-                    dropdown.classList.remove('open');
-                }
-            });
-
-            // تبديل حالة القائمة
-            element.parentElement.classList.toggle('open');
-        }
-
-        function selectOption(option) {
-            let dropdown = option.closest('.dropdown');
-            let selectedText = dropdown.querySelector('.selected-option');
-            let inputField = dropdown.querySelector('input[type="hidden"]');
-
-            // تحديث النص المخفي وإغلاق القائمة
-            selectedText.textContent = option.textContent;
-            inputField.value = option.textContent;
-            dropdown.classList.remove('open');
-        }
-
-        // إغلاق القائمة عند النقر خارجها
-        document.addEventListener("click", function (event) {
-            if (!event.target.closest(".dropdown")) {
-                document.querySelectorAll(".dropdown").forEach(dropdown => {
-                    dropdown.classList.remove("open");
-                });
+    inputs.forEach((input) => {
+        input.addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+                this.parentElement.classList.add("hide-labels");
+            } else {
+                this.parentElement.classList.remove("hide-labels");
             }
         });
+
+        input.addEventListener("focus", function () {
+            this.parentElement.classList.add("hide-labels");
+        });
+
+        input.addEventListener("blur", function () {
+            if (this.value.trim() === "") {
+                this.parentElement.classList.remove("hide-labels");
+            }
+        });
+    });
+
+    // دعم القائمة المنسدلة (dropdown المخصصة)
+    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", function (event) {
+            event.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
+            const dropdown = this.parentElement;
+            document.querySelectorAll(".dropdown").forEach(d => {
+                if (d !== dropdown) d.classList.remove("open"); // إغلاق القوائم الأخرى
+            });
+            dropdown.classList.toggle("open");
+        });
+    });
+
+    // اختيار عنصر من القائمة
+    document.querySelectorAll(".dropdown-menu li").forEach((item) => {
+        item.addEventListener("click", function () {
+            let dropdown = this.closest(".dropdown");
+            let selectedText = dropdown.querySelector(".selected-option");
+            let inputField = dropdown.querySelector("input[type='hidden']");
+
+            selectedText.textContent = this.textContent; // تحديث النص
+            inputField.value = this.textContent; // تحديث القيمة المخفية
+            dropdown.classList.remove("open"); // إغلاق القائمة
+        });
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    document.addEventListener("click", function (event) {
+        document.querySelectorAll(".dropdown").forEach(dropdown => {
+            dropdown.classList.remove("open");
+        });
+    });
+});
+
 
 
     </script>

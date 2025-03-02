@@ -1395,6 +1395,7 @@ footer {
         width: 100%;
         margin-right: 10px;
         font-size: 16px;
+        direction: rtl;
     }
 
     .form-group i {
