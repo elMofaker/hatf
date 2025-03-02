@@ -172,6 +172,8 @@ header {
 
                         a {
                             background-color: transparent;
+                            font-size: 1rem;
+                            font-weight: 500;
                         }
                     }
 
@@ -199,7 +201,7 @@ header {
             a {
                 color: var(--white);
                 text-decoration: none;
-                font-size: .9rem;
+                font-size: 1.1rem;
                 border-radius: 8px;
             }
 
@@ -233,14 +235,14 @@ header {
     }
 
     nav .main-link {
-        font-size: .7rem;
+        font-size: .8rem;
         padding: .4rem .7rem;
 
     }
 
     nav .main-link span {
         font-weight: 500;
-        font-size: .7rem;
+        font-size: .9rem;
     }
 
     nav .main-link img {
@@ -269,7 +271,7 @@ header {
     }
 
     .dropdown-toggle {
-        font-size: .9rem !important;
+        font-size: 1.1rem !important;
     }
 
     .dropdown-menu {
@@ -345,23 +347,28 @@ header {
     }
 
     h1 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         font-weight: bold;
 
         span {
             img {
-                width: 20px;
-                height: 20px;
+                width: 35px;
+                height: 35px;
             }
         }
     }
 
+    h4 {
+        font-size: 1.4rem;
+    }
+
     p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
 
 }
+
 /* end hero */
 
 /* start services */
@@ -1138,7 +1145,7 @@ footer {
     from {
         transform: translateX(-50%);
     }
-    
+
     to {
         transform: translateX(0);
     }
@@ -1266,6 +1273,287 @@ footer {
             height: 20px;
         }
 
+    }
+
+    .card-img-top {
+        height: 370px;
+
+    }
+
+    .form-container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .form-group.hide-labels::before,
+    .form-group.hide-labels::after,
+    .textarea-group.hide-labels::before,
+    .textarea-group.hide-labels::after {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* تحسين شكل الحقول */
+    .form-group {
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--brown);
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 7px -5px var(--primary);
+        position: relative;
+        width: 100%;
+    }
+
+    .form-group::before,
+    .form-group::after {
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* تنسيق الحقول مع الأيقونات */
+    .form-group:nth-of-type(1)::after {
+        content: url('../img/icon-input-1.svg');
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group:nth-of-type(1)::before {
+        content: 'أدخل الاسم بالكامل';
+        position: absolute;
+        right: 45px;
+        top: 56%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: var(--white);
+    }
+
+    /* start i 2 */
+    .form-group:nth-of-type(2)::after {
+        content: url('../img/icon-input-2.svg');
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group:nth-of-type(2)::before {
+        content: 'أدخل البريد الإلكتروني';
+        position: absolute;
+        right: 45px;
+        top: 56%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: var(--white);
+    }
+
+    /* start i 3 */
+    .form-group:nth-of-type(3)::after {
+        content: url('../img/icon-input-3.svg');
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-group:nth-of-type(3)::before {
+        content: 'أدخل رقم الهاتف';
+        position: absolute;
+        right: 45px;
+        top: 56%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: var(--white);
+    }
+
+    /* start i 4 */
+    .form-group:nth-of-type(4)::after {
+        content: url('../img/icon-input-4.svg');
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .form-group input {
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--white);
+        width: 100%;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .form-group i {
+        color: var(--primary);
+    }
+
+    .textarea-group {
+        border: 2px solid var(--brown);
+        box-shadow: 0 0 7px -5px var(--primary);
+        border-radius: 8px;
+        padding: 10px;
+        height: 100px;
+        position: relative;
+    }
+
+    .textarea-group::after {
+        content: url('../img/icon-input-5.svg');
+        position: absolute;
+        right: 15px;
+        top: 25%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    .textarea-group::before {
+        content: 'أدخل كلمة المرور';
+        position: absolute;
+        right: 45px;
+        top: 28%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: var(--white);
+    }
+
+    .textarea-group textarea {
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--white);
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        resize: none;
+    }
+
+    .form-group select {
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--white);
+        width: 100%;
+        margin-right: 10px;
+        font-size: 16px;
+        appearance: none;
+        /* إزالة الشكل الافتراضي */
+        padding: 10px;
+        background-color: transparent;
+    }
+
+    /* إضافة أيقونة للسهم المنسدل */
+    .form-group::after {
+        content: url('../img/icon-dropdown.svg');
+        /* أيقونة السهم */
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+    }
+
+    /* تنسيق الخيارات داخل القائمة */
+    .form-group select option {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* تنسيق العنصر الرئيسي للقائمة */
+    .dropdown {
+        width: 100%;
+        background: var(--black);
+        border: 2px solid var(--brown);
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+        padding-right: 48px;
+        display: flex;
+        justify-content: end;
+    }
+
+    /* تصميم زر القائمة المنسدلة */
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--white);
+        font-size: 16px;
+        direction: rtl;
+        gap: 5px;
+    }
+
+    /* أيقونة السهم */
+    .dropdown-arrow {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    /* القائمة المنسدلة */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        width: auto;
+        background: var(--black);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+
+    }
+
+    /* تصميم العناصر داخل القائمة */
+    .dropdown-menu li {
+        padding: 10px;
+        color: var(--white);
+        cursor: pointer;
+        transition: background 0.2s;
+        border-bottom: 1px solid var(--brown);
+        text-align: end;
+    }
+
+    /* عند فتح القائمة، يظهر السهم مقلوبًا */
+    .dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    /* تأثير عند تمرير الماوس */
+    .dropdown-menu li:hover {
+        background: var(--brown);
+    }
+
+
+    /* عند فتح القائمة */
+    .dropdown.open .dropdown-menu {
+        display: flex;
+    }
+
+    @media (max-width: 992px) {
+        .card-img-top {
+            height: 250px;
+            width: 80%;
+        }
     }
 }
 

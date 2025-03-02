@@ -88,13 +88,10 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="content">
-                <h1 class="py-lg-3 py-2  text-end">خدمات الصوتي والمرئي 
+                <h1 class="py-lg-3 py-2 text-end">خدمات الصوتي والمرئي 
                     <span>
                         <img src="src/img/icon-hero.svg" alt="img"></span>
                 </h1>
-                <h4 class="py-lg-3 py-2  text-end">
-                    جودة تُسمع وتُشاهد - خدمات صوتية ومرئية ترتقي بمحتواك!
-                </h4>
 
                 <p class="py-lg-3 py-2 text-end">
                     اجعل علامتك التجارية تبرز بوضوح مع خدمات الصوتي والمرئي الاحترافية
@@ -484,6 +481,46 @@
                     </h4>
                 </div>
             </div>
+            <div class="row justify-content-center">
+
+                <div class="col-lg-6 center col-12 py-3">
+                    <img src="src/img/img-home-contact.png" class="card-img-top" alt="img">
+                </div>
+
+                <div class="col-lg-6 col-12 py-3 center bg-w">
+                    <form class="w-100">
+                        <div class="form-container">
+                            <div class="form-group">
+                                <input type="text" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="" />
+                            </div>
+                            <div class="form-group dropdown">
+                                <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                    <span class="selected-option">اختر الخدمة</span>
+                                
+                                </div>
+                                <ul class="dropdown-menu">
+                                    <li onclick="selectOption(this)">الخدمة 1</li>
+                                    <li onclick="selectOption(this)">الخدمة 2</li>
+                                    <li onclick="selectOption(this)">الخدمة 3</li>
+                                    <li onclick="selectOption(this)">الخدمة 4</li>
+                                </ul>
+                                <input type="hidden" name="selected_service">
+                            </div>
+                            
+                            <div class="textarea-group">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
 
             <div class="w-100 d-flex justify-content-center align-items-center pt-5">
                 <a href="#" class="center main-btn">
@@ -631,6 +668,41 @@
 
             }
         });
+
+
+        function toggleDropdown(element) {
+            // إغلاق أي قائمة مفتوحة قبل فتح القائمة الجديدة
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                if (dropdown !== element.parentElement) {
+                    dropdown.classList.remove('open');
+                }
+            });
+
+            // تبديل حالة القائمة
+            element.parentElement.classList.toggle('open');
+        }
+
+        function selectOption(option) {
+            let dropdown = option.closest('.dropdown');
+            let selectedText = dropdown.querySelector('.selected-option');
+            let inputField = dropdown.querySelector('input[type="hidden"]');
+
+            // تحديث النص المخفي وإغلاق القائمة
+            selectedText.textContent = option.textContent;
+            inputField.value = option.textContent;
+            dropdown.classList.remove('open');
+        }
+
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".dropdown")) {
+                document.querySelectorAll(".dropdown").forEach(dropdown => {
+                    dropdown.classList.remove("open");
+                });
+            }
+        });
+
+
     </script>
 
 </body>
