@@ -1191,12 +1191,12 @@ footer {
             }
 
             .card-body {
-                
-            h5 {
-                font-size: 1.3rem;
-                font-weight: bold;
-                padding-bottom: 5px;
-            }
+
+                h5 {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    padding-bottom: 5px;
+                }
 
 
                 p {
@@ -1228,4 +1228,22 @@ footer {
 }
 
 /* end home blog */
+/* start home packages */
+.packages {
+    background-color: var(--black);
+
+    h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--white);
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+}
+
+/* end home packages */
 /* end home page */
