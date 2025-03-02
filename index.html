@@ -430,7 +430,7 @@
     <!-- start-hom-packages -->
     <div class="home-packages pt-2 pb-5">
         <div class="">
-            <div class="container d-flex justify-content-end py-3">
+            <div class="container d-flex justify-content-end py-3 pb-5">
                 <div class="main-title-home ">
                     <h4 class="card-title ">
                         احدث مدوناتنا
@@ -502,7 +502,7 @@
                             <div class="form-group dropdown">
                                 <div class="dropdown-toggle" onclick="toggleDropdown(this)">
                                     <span class="selected-option">اختر الخدمة</span>
-                                
+
                                 </div>
                                 <ul class="dropdown-menu">
                                     <li onclick="selectOption(this)">الخدمة 1</li>
@@ -512,7 +512,7 @@
                                 </ul>
                                 <input type="hidden" name="selected_service">
                             </div>
-                            
+
                             <div class="textarea-group">
                                 <textarea></textarea>
                             </div>
@@ -669,60 +669,60 @@
             }
         });
         document.addEventListener("DOMContentLoaded", function () {
-    const inputs = document.querySelectorAll(".form-group input, .textarea-group textarea");
+            const inputs = document.querySelectorAll(".form-group input, .textarea-group textarea");
 
-    inputs.forEach((input) => {
-        input.addEventListener("input", function () {
-            if (this.value.trim() !== "") {
-                this.parentElement.classList.add("hide-labels");
-            } else {
-                this.parentElement.classList.remove("hide-labels");
-            }
-        });
+            inputs.forEach((input) => {
+                input.addEventListener("input", function () {
+                    if (this.value.trim() !== "") {
+                        this.parentElement.classList.add("hide-labels");
+                    } else {
+                        this.parentElement.classList.remove("hide-labels");
+                    }
+                });
 
-        input.addEventListener("focus", function () {
-            this.parentElement.classList.add("hide-labels");
-        });
+                input.addEventListener("focus", function () {
+                    this.parentElement.classList.add("hide-labels");
+                });
 
-        input.addEventListener("blur", function () {
-            if (this.value.trim() === "") {
-                this.parentElement.classList.remove("hide-labels");
-            }
-        });
-    });
-
-    // دعم القائمة المنسدلة (dropdown المخصصة)
-    document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", function (event) {
-            event.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
-            const dropdown = this.parentElement;
-            document.querySelectorAll(".dropdown").forEach(d => {
-                if (d !== dropdown) d.classList.remove("open"); // إغلاق القوائم الأخرى
+                input.addEventListener("blur", function () {
+                    if (this.value.trim() === "") {
+                        this.parentElement.classList.remove("hide-labels");
+                    }
+                });
             });
-            dropdown.classList.toggle("open");
-        });
-    });
 
-    // اختيار عنصر من القائمة
-    document.querySelectorAll(".dropdown-menu li").forEach((item) => {
-        item.addEventListener("click", function () {
-            let dropdown = this.closest(".dropdown");
-            let selectedText = dropdown.querySelector(".selected-option");
-            let inputField = dropdown.querySelector("input[type='hidden']");
+            // دعم القائمة المنسدلة (dropdown المخصصة)
+            document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+                toggle.addEventListener("click", function (event) {
+                    event.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
+                    const dropdown = this.parentElement;
+                    document.querySelectorAll(".dropdown").forEach(d => {
+                        if (d !== dropdown) d.classList.remove("open"); // إغلاق القوائم الأخرى
+                    });
+                    dropdown.classList.toggle("open");
+                });
+            });
 
-            selectedText.textContent = this.textContent; // تحديث النص
-            inputField.value = this.textContent; // تحديث القيمة المخفية
-            dropdown.classList.remove("open"); // إغلاق القائمة
-        });
-    });
+            // اختيار عنصر من القائمة
+            document.querySelectorAll(".dropdown-menu li").forEach((item) => {
+                item.addEventListener("click", function () {
+                    let dropdown = this.closest(".dropdown");
+                    let selectedText = dropdown.querySelector(".selected-option");
+                    let inputField = dropdown.querySelector("input[type='hidden']");
 
-    // إغلاق القائمة عند النقر خارجها
-    document.addEventListener("click", function (event) {
-        document.querySelectorAll(".dropdown").forEach(dropdown => {
-            dropdown.classList.remove("open");
+                    selectedText.textContent = this.textContent; // تحديث النص
+                    inputField.value = this.textContent; // تحديث القيمة المخفية
+                    dropdown.classList.remove("open"); // إغلاق القائمة
+                });
+            });
+
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function (event) {
+                document.querySelectorAll(".dropdown").forEach(dropdown => {
+                    dropdown.classList.remove("open");
+                });
+            });
         });
-    });
-});
 
 
 
