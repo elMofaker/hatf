@@ -6,6 +6,24 @@
     --opasete: #e4cc85;
 }
 
+@font-face {
+    font-family: 'ManchetteModern';
+    src: url('../font/ManchetteModern/ManchetteModernVF.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ManchetteModern', sans-serif !important;
+}
+
+
 .main-title-home {
     position: relative;
     border-radius: 10px;
@@ -67,15 +85,6 @@
     align-items: center;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Tajawal', sans-serif;
-}
 
 /* start nav */
 
@@ -301,7 +310,7 @@ header {
 .hero {
     position: relative;
     background-image: url("../img/bg-hero.svg");
-    height: 75vh;
+    height: auto;
     width: 100%;
     background-size: cover;
     background-position: center center;
@@ -353,27 +362,6 @@ header {
 
 
 }
-
-@media (max-width:767px) {
-    .hero {
-        height: 75vh;
-
-
-        h1 {
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        h4 {
-            font-size: .9rem;
-        }
-
-        p {
-            font-size: 0.8rem;
-        }
-    }
-}
-
 /* end hero */
 
 /* start services */
@@ -1148,11 +1136,11 @@ footer {
 
 @keyframes slide {
     from {
-        transform: translateX(0);
-    }
-
-    to {
         transform: translateX(-50%);
+    }
+    
+    to {
+        transform: translateX(0);
     }
 }
 
