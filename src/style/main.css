@@ -1332,7 +1332,7 @@ footer {
         right: 45px;
         top: 56%;
         transform: translateY(-50%);
-        font-size: 14px;
+        font-size: 1.1rem;
         color: var(--white);
     }
 
@@ -1353,7 +1353,7 @@ footer {
         right: 45px;
         top: 56%;
         transform: translateY(-50%);
-        font-size: 14px;
+        font-size: 1.1rem;
         color: var(--white);
     }
 
@@ -1374,7 +1374,7 @@ footer {
         right: 45px;
         top: 56%;
         transform: translateY(-50%);
-        font-size: 14px;
+        font-size: 1.1rem;
         color: var(--white);
     }
 
@@ -1398,8 +1398,9 @@ footer {
         color: var(--white);
         width: 100%;
         margin-right: 10px;
-        font-size: 16px;
+        font-size: 1.1rem;
         direction: rtl;
+        z-index: 1;
     }
 
     .form-group i {
@@ -1431,7 +1432,7 @@ footer {
         right: 45px;
         top: 28%;
         transform: translateY(-50%);
-        font-size: 14px;
+        font-size: 1.1rem;
         color: var(--white);
     }
 
@@ -1444,6 +1445,9 @@ footer {
         height: 100%;
         font-size: 16px;
         resize: none;
+        position: relative;
+        z-index: 1;
+        direction: rtl;
     }
 
     .form-group select {
