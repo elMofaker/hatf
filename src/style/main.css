@@ -842,7 +842,6 @@ header {
     }
 }
 
-
 /* end about-3 */
 
 /* start contact */
@@ -1034,7 +1033,7 @@ footer {
         }
 
         p {
-            width:100%;
+            width: 100%;
             font-size: 1.3rem;
         }
     }
@@ -1434,7 +1433,7 @@ footer {
     }
 
     .form-group:nth-of-type(2)::before {
-        content: 'أدخل البريد الإلكتروني';
+        content: 'رقم الجوال';
         position: absolute;
         right: 45px;
         top: 56%;
@@ -1455,7 +1454,7 @@ footer {
     }
 
     .form-group:nth-of-type(3)::before {
-        content: 'أدخل رقم الهاتف';
+        content: 'الايميل الالكتروني';
         position: absolute;
         right: 45px;
         top: 56%;
@@ -1474,8 +1473,6 @@ footer {
         width: 20px;
         height: 20px;
     }
-
-
 
     .form-group input {
         background: none;
@@ -1513,7 +1510,7 @@ footer {
     }
 
     .textarea-group::before {
-        content: 'أدخل كلمة المرور';
+        content: 'تفاصيل الخدمة';
         position: absolute;
         right: 45px;
         top: 28%;
