@@ -1647,6 +1647,16 @@ footer {
             width: 80%;
         }
     }
+
+    button {
+        width: 100%;
+    }
+
+    @media (max-width:992px) {
+        button {
+            width: 50%;
+        }
+    }
 }
 
 /* end home contact */
