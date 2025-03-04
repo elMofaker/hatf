@@ -108,7 +108,6 @@ header {
             padding: 5px 10px;
         }
 
-
         .navbar-collapse {
             background-color: var(--black);
             border-radius: 20px;
@@ -208,6 +207,9 @@ header {
         }
     }
 
+    .main-link {
+        font-weight: 700;
+    }
 
     .main-link img {
         width: 15px;
@@ -235,7 +237,7 @@ header {
     }
 
     nav .main-link {
-        font-size: .8rem;
+        font-size: .7rem;
         padding: .4rem .7rem;
 
     }
