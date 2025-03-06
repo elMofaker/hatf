@@ -397,7 +397,7 @@ header {
 
 
     h4 {
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -431,11 +431,11 @@ header {
             }
 
             h5 {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             p {
-                font-size: .9rem;
+                font-size: 1rem;
             }
 
         }
@@ -496,7 +496,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -515,7 +515,7 @@ header {
 
             h5 {
                 font: bold;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 color: var(--white);
 
                 img {
@@ -551,7 +551,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -570,7 +570,7 @@ header {
 
             h5 {
                 font: bold;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 color: var(--white);
 
                 img {
@@ -727,7 +727,7 @@ header {
     }
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -771,16 +771,16 @@ header {
             }
 
             h6 {
-                font-size: .9rem;
+                font-size: 1.2rem;
             }
 
             p {
-                font-size: .9rem;
+                font-size: 1rem;
             }
 
             span {
                 color: rgba(255, 255, 255, 0.464);
-                font-size: .9rem;
+                font-size: 1rem;
             }
 
         }
