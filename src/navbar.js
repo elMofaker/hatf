@@ -1,4 +1,3 @@
-// header 
 document.addEventListener("DOMContentLoaded", function () {
     let navItems = document.querySelectorAll(".nav-item");
 
@@ -6,9 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let link = item.querySelector("a");
 
         link.addEventListener("click", function (event) {
-            event.preventDefault();
-            removeActiveStates();
-            item.classList.add("active");
+            let href = this.getAttribute("href");
+
+            // تحقق مما إذا كان الرابط خارجيًا
+            let isExternal = href.startsWith("http") || href.startsWith("https");
+
+            if (!isExternal) {
+                event.preventDefault();
+                removeActiveStates();
+                item.classList.add("active");
+            }
         });
     });
 
@@ -47,9 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // إغلاق الناف بار عند النقر على أي رابط داخله
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
-            setTimeout(() => {
-                navbarCollapse.classList.remove("show");
-            }, 200);
+            let href = this.getAttribute("href");
+            let isExternal = href.startsWith("http") || href.startsWith("https");
+
+            if (!isExternal) {
+                setTimeout(() => {
+                    navbarCollapse.classList.remove("show");
+                }, 200);
+            }
         });
     });
 
@@ -64,14 +75,19 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenus.forEach(menu => {
         menu.querySelectorAll("a").forEach(item => {
             item.addEventListener("click", function () {
-                let parentDropdown = this.closest(".dropdown-menu");
-                let dropdownToggle = parentDropdown.previousElementSibling;
-                let bootstrapDropdown = new bootstrap.Dropdown(dropdownToggle);
+                let href = this.getAttribute("href");
+                let isExternal = href.startsWith("http") || href.startsWith("https");
 
-                setTimeout(() => {
-                    bootstrapDropdown.hide();
-                    navbarCollapse.classList.remove("show");
-                }, 200);
+                if (!isExternal) {
+                    let parentDropdown = this.closest(".dropdown-menu");
+                    let dropdownToggle = parentDropdown.previousElementSibling;
+                    let bootstrapDropdown = new bootstrap.Dropdown(dropdownToggle);
+
+                    setTimeout(() => {
+                        bootstrapDropdown.hide();
+                        navbarCollapse.classList.remove("show");
+                    }, 200);
+                }
             });
         });
     });
