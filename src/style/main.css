@@ -851,7 +851,7 @@ header {
         transform: rotate(180deg);
     }
 
-    
+
 }
 
 /* end about-3 */
@@ -1079,6 +1079,8 @@ footer {
             box-shadow: 0 0 9px -4px var(--primary);
             background-color: var(--black);
             color: var(--white);
+            min-height: 325px;
+            
 
             h5 {
                 font-size: 1.5rem;
@@ -1168,6 +1170,7 @@ footer {
 
                 p {
                     font-size: 1.2rem;
+                    direction: rtl;
                 }
 
             }
@@ -1350,7 +1353,7 @@ footer {
 
         @media (min-width:767px) {
             img {
-                width: 85%;
+                width: 65%;
 
             }
         }
@@ -1662,6 +1665,7 @@ footer {
 
     button {
         width: 100%;
+        border: none;
     }
 
     @media (max-width:992px) {
