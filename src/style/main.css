@@ -23,6 +23,10 @@ body {
     font-family: 'ManchetteModern', sans-serif !important;
 }
 
+p {
+    direction: rtl;
+}
+
 
 .main-title-home {
     position: relative;
@@ -1080,7 +1084,7 @@ footer {
             background-color: var(--black);
             color: var(--white);
             min-height: 325px;
-            
+
 
             h5 {
                 font-size: 1.5rem;
@@ -1353,7 +1357,7 @@ footer {
 
         @media (min-width:767px) {
             img {
-                width: 65%;
+                width: 100%;
 
             }
         }
@@ -1676,4 +1680,10 @@ footer {
 }
 
 /* end home contact */
+
+footer{
+    h5{
+        font-size: 1rem;
+    }
+}
 /* end home page */
