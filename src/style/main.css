@@ -27,7 +27,6 @@ p {
     direction: rtl;
 }
 
-
 .main-title-home {
     position: relative;
     border-radius: 10px;
@@ -56,6 +55,7 @@ p {
     font-weight: 800;
     padding: .5rem 1rem;
     transition: 0.5s;
+    border: none;
 
 }
 
@@ -63,6 +63,7 @@ p {
     background-color: var(--opasete);
     transition: 0.5s;
     color: var(--black);
+    border: none;
 }
 
 .main-btn {
@@ -74,6 +75,7 @@ p {
     font-weight: bold;
     padding: .5rem 1rem;
     transition: 0.5s;
+    border: none;
 
 }
 
@@ -81,6 +83,7 @@ p {
     background-color: var(--primary);
     transition: 0.5s;
     color: var(--black);
+    border: none;
 }
 
 .center {
@@ -337,8 +340,6 @@ header {
     padding: 20px;
     box-shadow: 2px 0 23px -4px black;
 
-
-
     .overlay {
         position: absolute;
         top: 0;
@@ -376,6 +377,7 @@ header {
 
     h4 {
         font-size: 1.3rem;
+        direction: rtl;
     }
 
     p {
@@ -611,7 +613,7 @@ header {
     background-color: var(--black);
 
     h4 {
-        font-size: 1rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -620,8 +622,8 @@ header {
         }
 
         img {
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
         }
 
     }
@@ -736,8 +738,8 @@ header {
         color: var(--white);
 
         img {
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
         }
 
     }
@@ -834,6 +836,7 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: end;
+                direction: ltr;
             }
         }
 
@@ -1137,11 +1140,11 @@ footer {
 /* end services */
 /* start home mcq */
 .home-mcq {
-
+    
     background-color: var(--black);
 
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: var(--white);
 
@@ -1361,6 +1364,9 @@ footer {
 
             }
         }
+    }
+    .main-btn{
+        padding: .3rem .5rem;
     }
 
 
