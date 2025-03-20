@@ -326,12 +326,8 @@ header {
 /* start hero */
 .hero {
     position: relative;
-    background-image: url("../img/bg-hero.svg");
     height: auto;
     width: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,6 +335,16 @@ header {
     color: white;
     padding: 20px;
     box-shadow: 2px 0 23px -4px black;
+    overflow: hidden;
+    .bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
     .overlay {
         position: absolute;
@@ -347,7 +353,7 @@ header {
         width: 100%;
         height: 100%;
         background: linear-gradient(to right, rgb(37 30 0 / 84%), rgb(0 0 0 / 75%));
-
+        z-index: 0;
     }
 
     .content {
@@ -366,13 +372,11 @@ header {
         justify-content: center;
         align-items: center;
         gap: 3px;
+    }
 
-        span {
-            img {
-                width: 35px;
-                height: 35px;
-            }
-        }
+    h1 span img {
+        width: 35px;
+        height: 35px;
     }
 
     h4 {
@@ -383,8 +387,6 @@ header {
     p {
         font-size: 1.1rem;
     }
-
-
 }
 
 /* end hero */
@@ -981,12 +983,8 @@ footer {
 /* start home hero */
 .hero-home {
     position: relative;
-    background-image: url("../img/img-home-hero.png");
     height: auto;
     width: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -994,6 +992,17 @@ footer {
     color: white;
     padding: 20px;
     box-shadow: 2px 0 23px -4px black;
+    overflow: hidden;
+
+    .bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
     .overlay {
         position: absolute;
@@ -1002,7 +1011,7 @@ footer {
         width: 100%;
         height: 100%;
         background: linear-gradient(to right, rgb(37 30 0 / 84%), rgb(0 0 0 / 75%));
-
+        z-index: 0;
     }
 
     .content {
@@ -1017,13 +1026,11 @@ footer {
     h1 {
         font-size: 2.5rem;
         font-weight: bold;
+    }
 
-        span {
-            img {
-                width: 35px;
-                height: 35px;
-            }
-        }
+    h1 span img {
+        width: 35px;
+        height: 35px;
     }
 
     p {
@@ -1031,10 +1038,7 @@ footer {
         font-size: 2rem;
     }
 
-
-
     @media (max-width: 992px) {
-
         h1 {
             font-size: 2rem;
         }
@@ -1046,7 +1050,6 @@ footer {
     }
 
     @media (max-width: 450px) {
-
         h1 {
             font-size: 1.8rem;
         }
@@ -1140,7 +1143,7 @@ footer {
 /* end services */
 /* start home mcq */
 .home-mcq {
-    
+
     background-color: var(--black);
 
     h4 {
@@ -1365,7 +1368,8 @@ footer {
             }
         }
     }
-    .main-btn{
+
+    .main-btn {
         padding: .3rem .5rem;
     }
 
@@ -1687,9 +1691,10 @@ footer {
 
 /* end home contact */
 
-footer{
-    h5{
+footer {
+    h5 {
         font-size: 1rem;
     }
 }
+
 /* end home page */
